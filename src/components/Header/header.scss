@@ -1,9 +1,60 @@
+@use '../../styles/vars';
+@use '../../styles/reset';
+
 .header {
-    // min-height: 100vh;
+  padding-top: vars.$gutter;
+  padding: vars.$gutter;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // font-size: calc(10px + 2vmin);
+  font-family: 'Barlow Condensed Regular';
+  color: vars.$secondaryColor;
+
+
+  &__left {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    align-content: center;
+    width: 50%;
+    height: 50%;
+    height:3* vars.$gutter;
+    background-color: red;
+
+    &__logo {
+      padding: vars.$gutter;
+    }
+    &__divider {
+      padding: vars.$gutter;
+      width: 80%;
+      height: 10px;
+      border-bottom: 1px solid vars.$secondaryColor;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: flex-start;
+    height:3* vars.$gutter;
+    width: 50%;
+    //ul
+    &__menu{
+      display: flex;
+      align-items: center;
+      &--item {
+        margin-right: vars.$gutter;
+        display: flex;
+        font-size: 1rem;
+      }
+    }
+    
+  }
+    
+}
+
+  .header__nav__menu--item{
+    
+    
+  }
+  .active {
+    text-decoration: underline;
   }

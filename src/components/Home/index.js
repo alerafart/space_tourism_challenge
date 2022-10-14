@@ -1,12 +1,11 @@
-
 // Components
-import Header from "../Header";
+
 // import Destination from "../Destination";
 function Home() {
     return (
       <>
-        <main>
-          <Header />
+        <main className="home">
+          
           
         </main>
         
