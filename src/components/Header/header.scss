@@ -8,24 +8,22 @@
   justify-content: space-between;
   align-items: center;
   // font-size: calc(10px + 2vmin);
-  font-family: 'Barlow Condensed Regular';
+  // font-family: 'Bellefair', serif;
+  font-family: 'Barlow Condensed', sans-serif;
   color: vars.$secondaryColor;
 
 
   &__left {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 50%;
-    height: 50%;
-    height:3* vars.$gutter;
-    background-color: red;
+    width: 40%;
+
 
     &__logo {
       padding: vars.$gutter;
     }
     &__divider {
       padding: vars.$gutter;
+      padding-right: 2* vars.$gutter;
       width: 80%;
       height: 10px;
       border-bottom: 1px solid vars.$secondaryColor;
@@ -34,15 +32,16 @@
   &__nav {
     display: flex;
     justify-content: flex-start;
-    height:3* vars.$gutter;
+    padding: vars.$gutter;
+    height:4* vars.$gutter;
     width: 50%;
+    background-color: rgba(142, 142, 142, 0.601);
     //ul
     &__menu{
       display: flex;
       align-items: center;
       &--item {
         margin-right: vars.$gutter;
-        display: flex;
         font-size: 1rem;
       }
     }
