@@ -14,12 +14,12 @@ function App() {
       <main className="main">
         <Header />
         <Routes>
-          <Route path="/ " element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="destination" element={<Destination />} />
           <Route path="crew" element={<Crew />} />
           <Route path="technology" element={<Technology />} />
         </Routes>
-        <Home />
+        
       </main>
       
     </div>

@@ -1,12 +1,11 @@
 // Components
-import Header from "../Header";
+// import Header from "../Header";
 //styles
 import './home.scss';
 function Home() {
     return (
       <>
         <div className="home">
-          {/* <section> */}
           <div className="home__left">
             <h5 className="home__left__h5">
               So, you want to travel to
@@ -24,7 +23,6 @@ function Home() {
           <div className="home__right">
             <button className="home__right__inner">explore</button>
           </div>
-          {/* </section> */}
         </div>       
         
       </>

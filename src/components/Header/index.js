@@ -1,5 +1,5 @@
 // == Import component
-import { NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import logo from '../../assets/shared/logo.svg';
 // == Import style
 import './header.scss';
@@ -23,37 +23,37 @@ function Header() {
       <nav className="header__nav">
         <ul className="header__nav__menu">
           <li className="header__nav__menu--item" >
-            <NavLink to="/ "
+            <Link to="/"
             // className= {({ isActive }) =>
             // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
               00 Home
-            </NavLink>
+            </Link>
           </li>
           <li 
           className="header__nav__menu--item"
             // className= {({ isActive }) =>
             // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
           >
-            <NavLink 
+            <Link 
             // className= {({ isActive }) =>
             // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             to="/destination">
               01 Destination
-            </NavLink>
+            </Link>
           </li>
           <li className="header__nav__menu--item"
           // className= {({ isActive }) =>
           //   isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
-            <NavLink to="/crew">
+            <Link to="/crew">
               02 Crew
-            </NavLink>
+            </Link>
           </li>
           <li className="header__nav__menu--item">
-            <NavLink to="/technology">
+            <Link to="/technology">
               03 Technology
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>

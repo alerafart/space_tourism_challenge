@@ -18,7 +18,7 @@
 
   &__left {
     display: flex;
-    width: 40%;
+    width: 50%;
 
     &__logo {
       padding: vars.$gutter;
@@ -54,11 +54,6 @@
   }
     
 }
-
-  .header__nav__menu--item{
-    
-    
-  }
   .active {
     text-decoration: underline;
   }
