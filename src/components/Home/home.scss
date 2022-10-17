@@ -1,6 +1,38 @@
+@use '../../styles/vars';
+@use '../../styles/reset';
+
 .home {
     height: 100vh;
     background-image: url("../../assets/home/background-home-desktop.jpg");
     background-size:cover ;
     font-family: 'Bellefair', serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // height: 100%;
+    &__left {
+        padding: 2* vars.$gutter;
+        width: 40%;
+        // background-color: antiquewhite;
+        &__h5 {
+            
+        }
+        &__h1 {
+            font-size: 150px;
+            text-transform: uppercase;
+        }
+    }
+    &__right {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: vars.$mainColor;
+        border-radius: 50%;
+        &__button {
+            height: fit-content;
+            background-color: none;
+        }
+    }
 }

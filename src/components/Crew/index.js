@@ -5,7 +5,7 @@ function Crew() {
   
   return (
     <div >
-        crew component
+
     </div>
   );
 }
