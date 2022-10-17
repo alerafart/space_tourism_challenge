@@ -1,5 +1,5 @@
 // == Import component
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import logo from '../../assets/shared/logo.svg';
 // == Import style
 import './header.scss';
@@ -15,45 +15,63 @@ function Header() {
     <header className="header">
       <div className="header__left">
         <div className="header__left__logo">
-        <img src={logo} alt='logo'/>
+        <NavLink to="/">
+          <img src={logo} alt='logo'/>
+        </NavLink>
         </div>
         
         <div className="header__left__divider"></div>
       </div>
       <nav className="header__nav">
         <ul className="header__nav__menu">
-          <li className="header__nav__menu--item" >
-            <Link to="/"
-            // className= {({ isActive }) =>
-            // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+          <li
+          className= "header__nav__menu--li"
+          // className="header__nav__menu--item" 
+          >
+            <NavLink to="/home"
+            className= {({ isActive }) =>
+            isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
               00 Home
-            </Link>
+            </NavLink>
+          </li>
+          <li className= "header__nav__menu--li"
+          // className="header__nav__menu--item"
+          //   className= {({ isActive }) =>
+          //   isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+          // 
+          >
+            <NavLink to="/destination"
+            className= {({ isActive }) =>
+            isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+            >
+              01 Destination
+            </NavLink>
+          </li>
+          <li className= "header__nav__menu--li"
+            // className="header__nav__menu--item"
+            // className= {({ isActive }) =>
+            // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+            >
+            <NavLink to="/crew"
+              className= {({ isActive }) =>
+              isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+            >
+              02 Crew
+            </NavLink>
           </li>
           <li 
-          className="header__nav__menu--item"
-            // className= {({ isActive }) =>
-            // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-          >
-            <Link 
-            // className= {({ isActive }) =>
-            // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-            to="/destination">
-              01 Destination
-            </Link>
-          </li>
-          <li className="header__nav__menu--item"
-          // className= {({ isActive }) =>
+            className= "header__nav__menu--li"
+          //   className= {({ isActive }) =>
           //   isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+          // 
+          >
+            <NavLink to="/technology"
+            className= {({ isActive }) =>
+            isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
-            <Link to="/crew">
-              02 Crew
-            </Link>
-          </li>
-          <li className="header__nav__menu--item">
-            <Link to="/technology">
               03 Technology
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

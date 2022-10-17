@@ -44,10 +44,19 @@
       justify-content: space-around;
       align-items: center;
       width: 100%;
+      &--li {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+        height: 50px;
+        // background-color:red ;
+      }
       &--item {
         margin-right: vars.$gutter;
         font-size: 1rem;
         text-transform: uppercase;
+        width: 100%;
       }
     }
     
@@ -56,4 +65,9 @@
 }
   .active {
     text-decoration: underline;
+    text-underline-offset: 2* vars.$gutter;
+    // border-bottom: 3px solid vars.$mainColor;
+    // line-height: 1rem;
+    // text-underline-offset: 5rem;
+    // margin-top: 2rem;
   }
