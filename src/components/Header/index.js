@@ -32,7 +32,9 @@ function Header() {
             className= {({ isActive }) =>
             isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
-              00 Home
+              <pre>
+                <span className="span">00 </span> Home
+              </pre>
             </NavLink>
           </li>
           <li className= "header__nav__menu--li"
@@ -45,7 +47,9 @@ function Header() {
             className= {({ isActive }) =>
             isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
-              01 Destination
+              <pre>
+                 <span className="span">01 </span> Destination
+              </pre>
             </NavLink>
           </li>
           <li className= "header__nav__menu--li"
@@ -57,7 +61,9 @@ function Header() {
               className= {({ isActive }) =>
               isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
-              02 Crew
+              <pre>
+                <span className="span">02 </span> Crew
+              </pre>
             </NavLink>
           </li>
           <li 
@@ -70,7 +76,9 @@ function Header() {
             className= {({ isActive }) =>
             isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
-              03 Technology
+              <pre>
+                <span className="span">03 </span> Technology
+              </pre>
             </NavLink>
           </li>
         </ul>

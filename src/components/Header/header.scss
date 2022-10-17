@@ -2,8 +2,7 @@
 @use '../../styles/reset';
 
 .header {
-  padding-top: vars.$gutter;
-  padding: vars.$gutter;
+  // padding-top: vars.$gutter;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +14,9 @@
   position: fixed;
   top: 20px;
   width: 100%;
+  @media(max-width:768px){
 
+  }
   &__left {
     display: flex;
     width: 50%;
@@ -26,48 +27,52 @@
     &__divider {
       padding: vars.$gutter;
       padding-right: 2* vars.$gutter;
-      width: 80%;
+      min-width: 70%;
+      max-width:80%;
       height: 10px;
       border-bottom: 1px solid vars.$secondaryColor;
+      @media(max-width:768px){
+        display: none;
+      }
     }
   }
   &__nav {
     display: flex;
     justify-content: center;
-    padding: vars.$gutter;
     height:4* vars.$gutter;
-    width: 50%;
+    min-width: 50%;
     backdrop-filter: blur(15px);
+    // background-color: aqua;
     //ul
-    &__menu{
+    &__menu {
       display: flex;
       justify-content: space-around;
       align-items: center;
       width: 100%;
-      &--li {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 25%;
-        height: 50px;
-        // background-color:red ;
-      }
       &--item {
+        display: flex;
+
         margin-right: vars.$gutter;
         font-size: 1rem;
         text-transform: uppercase;
-        width: 100%;
+        &:hover {
+        text-decoration: underline;
+        text-underline-offset: 1.5* vars.$gutter;
+        text-decoration-color: grey;
+        text-decoration-thickness: 3px;
+        }
       }
     }
-    
   }
-    
+}
+.span {
+  font-weight: bolder;
+  @media(max-width:768px){
+    display: none;
+  }
 }
   .active {
     text-decoration: underline;
-    text-underline-offset: 2* vars.$gutter;
-    // border-bottom: 3px solid vars.$mainColor;
-    // line-height: 1rem;
-    // text-underline-offset: 5rem;
-    // margin-top: 2rem;
+    text-underline-offset: 1.5* vars.$gutter;
+    text-decoration-thickness: 3px;
   }
