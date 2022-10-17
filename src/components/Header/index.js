@@ -5,8 +5,6 @@ import logo from '../../assets/shared/logo.svg';
 import './header.scss';
 
 // import data from '../../data.js';
-// import dt from '../../xdata.json';
-
 
 function Header() {
   // console.log(data.crew);
@@ -26,7 +24,6 @@ function Header() {
         <ul className="header__nav__menu">
           <li
           className= "header__nav__menu--li"
-          // className="header__nav__menu--item" 
           >
             <NavLink to="/home"
             className= {({ isActive }) =>
@@ -37,45 +34,32 @@ function Header() {
               </pre>
             </NavLink>
           </li>
-          <li className= "header__nav__menu--li"
-          // className="header__nav__menu--item"
-          //   className= {({ isActive }) =>
-          //   isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-          // 
-          >
+          <li className= "header__nav__menu--li">
             <NavLink to="/destination"
-            className= {({ isActive }) =>
-            isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-            >
+              className= {({ isActive }) =>
+              isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+              >
               <pre>
                  <span className="span">01 </span> Destination
               </pre>
             </NavLink>
           </li>
-          <li className= "header__nav__menu--li"
-            // className="header__nav__menu--item"
-            // className= {({ isActive }) =>
-            // isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-            >
+          <li className= "header__nav__menu--li">
             <NavLink to="/crew"
               className= {({ isActive }) =>
               isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-            >
+              >
               <pre>
                 <span className="span">02 </span> Crew
               </pre>
             </NavLink>
           </li>
           <li 
-            className= "header__nav__menu--li"
-          //   className= {({ isActive }) =>
-          //   isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-          // 
-          >
+            className= "header__nav__menu--li">
             <NavLink to="/technology"
-            className= {({ isActive }) =>
-            isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
-            >
+              className= {({ isActive }) =>
+              isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
+              >
               <pre>
                 <span className="span">03 </span> Technology
               </pre>
@@ -83,11 +67,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-
-        
-        
-          
-        
     </header>
   );
 }
