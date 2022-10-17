@@ -6,11 +6,12 @@ function Home() {
     return (
       <>
         <div className="home">
+          {/* <section> */}
           <div className="home__left">
             <h5 className="home__left__h5">
               So, you want to travel to
             </h5>
-            <h1 className="home__left__h1">
+            <h1 className="home__left__h1" >
               Space 
             </h1>
             <p>
@@ -21,9 +22,10 @@ function Home() {
 
           </div> 
           <div className="home__right">
-            <button className="home__right__button">Explore</button>
+            <button className="home__right__inner">explore</button>
           </div>
-        </div>
+          {/* </section> */}
+        </div>       
         
       </>
     );
