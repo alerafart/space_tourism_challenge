@@ -35,7 +35,8 @@
     padding: vars.$gutter;
     height:4* vars.$gutter;
     width: 50%;
-    background-color: rgba(142, 142, 142, 0.601);
+    // background-color: rgba(142, 142, 142, 0.601);
+    backdrop-filter: blur(15px);
     //ul
     &__menu{
       display: flex;
