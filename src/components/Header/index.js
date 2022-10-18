@@ -21,6 +21,7 @@ function Header() {
         <div className="header__left__divider"></div>
       </div>
       <nav className="header__nav">
+        <button className="header__nav--close">X</button>
         <ul className="header__nav__menu">
           <li
           className= "header__nav__menu--li"
