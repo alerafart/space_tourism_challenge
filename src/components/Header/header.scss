@@ -25,7 +25,6 @@
     &__divider {
       padding: vars.$gutter;
       padding-right: 2* vars.$gutter;
-      // min-width: 50%;
       width:100%;
       height: 10px;
       border-bottom: 1px solid vars.$secondaryColor;
@@ -51,8 +50,9 @@
       margin-top: 2* vars.$gutter;
     }
     &--close {
-      display: none;
+      visibility: hidden;
       @media(max-width:650px){
+        visibility: visible;
         background-color: 0;
         font-size: vars.$gutter;
         background:none;

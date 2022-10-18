@@ -4,11 +4,24 @@ import logo from '../../assets/shared/logo.svg';
 // == Import style
 import './header.scss';
 
+import {useState} from 'react';
 // import data from '../../data.js';
 
 function Header() {
   // console.log(data.crew);
   // console.log(dt);
+
+  const [mobileNavVisible, setMobileNavVisible] = useState(true);
+  const [burgerMenu, setBurgerMenu] = useState(false);
+
+  function handleCloseMobileNav() {
+    setMobileNavVisible(false);
+    setBurgerMenu(true);
+  }
+  function openBurgerMenu() {
+    setMobileNavVisible(true);
+    setBurgerMenu(false);
+  }
   return (
     <header className="header">
       <div className="header__left">
@@ -17,11 +30,25 @@ function Header() {
           <img src={logo} alt='logo'/>
         </NavLink>
         </div>
-        
         <div className="header__left__divider"></div>
       </div>
+
       <nav className="header__nav">
-        <button className="header__nav--close">X</button>
+        {
+          mobileNavVisible && 
+          <button 
+          className="header__nav--close"
+          onClick={handleCloseMobileNav}
+          >X</button>
+        }
+        {
+          burgerMenu && 
+          <button
+          className="header__nav--close"
+          onClick={openBurgerMenu}
+          >+</button>
+        }
+        
         <ul className="header__nav__menu">
           <li
           className= "header__nav__menu--li"
