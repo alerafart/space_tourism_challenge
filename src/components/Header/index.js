@@ -12,7 +12,7 @@ import useMediaQuery from "../Hooks/UseMediaQuery";
 function Header() {
   // console.log(data.crew);
   // console.log(dt);
-  const isDesktop = useMediaQuery('(min-width: 768px)');
+  const isDesktop = useMediaQuery('(min-width: 650px)');
 
   return (
     <header className="header">

@@ -1,9 +1,9 @@
 // == Import component
 import {NavLink} from "react-router-dom";
-import logo from '../../assets/shared/logo.svg';
-// == Import style
-import './navbarMobile.scss';
 
+// == Import style
+// import './navbarMobile.scss';
+import './header.scss';
 import {useState} from 'react';
 // import data from '../../data.js';
 
@@ -11,8 +11,8 @@ function NavbarMobile() {
   // console.log(data.crew);
   // console.log(dt);
 
-  const [mobileNavVisible, setMobileNavVisible] = useState(true);
-  const [burgerMenu, setBurgerMenu] = useState(false);
+  const [mobileNavVisible, setMobileNavVisible] = useState(false);
+  const [burgerMenu, setBurgerMenu] = useState(true);
 
   function handleCloseMobileNav() {
     setMobileNavVisible(false);
@@ -24,7 +24,6 @@ function NavbarMobile() {
   }
   return (
     <>
-
     {
       mobileNavVisible && 
       <nav className="header__nav">
@@ -45,7 +44,7 @@ function NavbarMobile() {
           isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
           >
             <pre>
-              <span className="span">00 </span> mobile Home
+              <span className="span">00 </span> Home
             </pre>
           </NavLink>
         </li>
@@ -84,12 +83,10 @@ function NavbarMobile() {
       </nav>
     }
     { !mobileNavVisible &&
-
       <button
       className="header__nav--open"
       onClick={openBurgerMenu}
       >+</button>
-    
     }
     </>
   );

@@ -2,8 +2,8 @@
 import {NavLink} from "react-router-dom";
 // import logo from '../../assets/shared/logo.svg';
 // == Import style
-import './navbarDesktop.scss';
-
+// import './navbarDesktop.scss';
+import './header.scss';
 // import {useState} from 'react';
 // import data from '../../data.js';
 
@@ -29,7 +29,7 @@ function NavbarDesktop() {
                     className={({ isActive }) => isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
                 >
                     <pre>
-                        <span className="span">01 </span>desktop Destination
+                        <span className="span">01 </span>Destination
                     </pre>
                 </NavLink>
             </li>

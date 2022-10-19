@@ -40,8 +40,10 @@
     min-width: 50%;
     width: auto;
     backdrop-filter: blur(25px);
-    
-
+    @media(max-width:768px){
+      // background-color: aqua;
+      // backdrop-filter: blur(1px);
+    }
     @media(max-width:650px){
       height: 100vh;
       width:15* vars.$gutter ;
@@ -53,41 +55,40 @@
       padding-left: 3* vars.$gutter;
       position: relative;
     }
-    // &--close {
-    //   visibility: hidden;
-    //   @media(max-width:650px){
-    //     visibility: visible;
-    //     background-color: 0;
-    //     font-size: vars.$gutter;
-    //     background:none;
-    //     display: block;
-    //     color: vars.$secondaryColor;
-    //     background-color: none;
-    //     width:1.5* vars.$gutter;
-    //     height: 1.5* vars.$gutter;
-    //     position: absolute;
-    //     top:0;
-    //     right: 10px;
-    //   }
-      
-    // }
-    // &--open {
-    //   visibility: hidden;
-    //   @media(max-width:650px){
-    //     visibility: visible;
-    //     background-color: 0;
-    //     font-size: vars.$gutter;
-    //     background:none;
-    //     display: block;
-    //     color: vars.$secondaryColor;
-    //     background-color: none;
-    //     width:1.5* vars.$gutter;
-    //     height: 1.5* vars.$gutter;
-    //     position: fixed;
-    //     top:60px;
-    //     right: 10px;
-    //   }
-    // }
+    &--close {
+      visibility: hidden;
+      @media(max-width:650px){
+        visibility: visible;
+        background-color: 0;
+        font-size: vars.$gutter;
+        background:none;
+        display: block;
+        color: vars.$secondaryColor;
+        background-color: none;
+        width:1.5* vars.$gutter;
+        height: 1.5* vars.$gutter;
+        position: absolute;
+        top:0;
+        right: 10px;
+      }
+    }
+    &--open {
+      visibility: hidden;
+      @media(max-width:650px){
+        visibility: visible;
+        background-color: 0;
+        font-size: vars.$gutter;
+        background:none;
+        display: block;
+        color: vars.$secondaryColor;
+        background-color: none;
+        width:1.5* vars.$gutter;
+        height: 1.5* vars.$gutter;
+        position: fixed;
+        top:60px;
+        right: 10px;
+      }
+    }
     //ul
     &__menu {
       display: flex;
