@@ -12,6 +12,9 @@ import useMediaQuery from "../Hooks/UseMediaQuery";
 function Header() {
   // console.log(data.crew);
   // console.log(dt);
+
+  // for conditional display of navbar desktop or mobile
+  // hook which listens for the screen with
   const isDesktop = useMediaQuery('(min-width: 650px)');
 
   return (
@@ -24,7 +27,6 @@ function Header() {
         </div>
         <div className="header__left__divider"></div>
       </div>
-
       {isDesktop ? <NavbarDesktop /> : <NavbarMobile />}
     </header>
   );

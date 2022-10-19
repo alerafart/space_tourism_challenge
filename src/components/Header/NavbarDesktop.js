@@ -1,15 +1,12 @@
 // == Import component
 import {NavLink} from "react-router-dom";
-// import logo from '../../assets/shared/logo.svg';
+
 // == Import style
-// import './navbarDesktop.scss';
 import './header.scss';
 // import {useState} from 'react';
 // import data from '../../data.js';
 
 function NavbarDesktop() {
-  // console.log(data.crew);
-  // console.log(dt);
 
   return (
     <>

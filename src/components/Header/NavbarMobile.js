@@ -1,6 +1,7 @@
 // == Import component
 import {NavLink} from "react-router-dom";
-
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { RiCloseFill } from 'react-icons/ri';
 // == Import style
 // import './navbarMobile.scss';
 import './header.scss';
@@ -32,7 +33,7 @@ function NavbarMobile() {
         <button 
         className="header__nav--close"
         onClick={handleCloseMobileNav}
-        >X</button>
+        ><RiCloseFill /></button>
       }
 
       <ul className="header__nav__menu">
@@ -86,7 +87,7 @@ function NavbarMobile() {
       <button
       className="header__nav--open"
       onClick={openBurgerMenu}
-      >+</button>
+      ><GiHamburgerMenu /></button>
     }
     </>
   );
