@@ -7,7 +7,7 @@ function destination() {
   
   return (
     <div className="destination">
-        destination component
+
     </div>
   );
 }

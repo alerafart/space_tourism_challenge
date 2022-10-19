@@ -2,21 +2,20 @@
 @use '../../styles/reset';
 
 .header {
-  padding-top: vars.$gutter;
-  padding: vars.$gutter;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  // font-size: calc(10px + 2vmin);
-  // font-family: 'Bellefair', serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
   font-family: 'Barlow Condensed', sans-serif;
-  color: vars.$secondaryColor;
-
+  color: vars.$mainColor;
+  position: fixed;
+  top: 20px;
+  width: 100%;
 
   &__left {
     display: flex;
-    width: 40%;
-
+    flex-grow: 2;
+    padding-right:2* vars.$gutter;
 
     &__logo {
       padding: vars.$gutter;
@@ -24,36 +23,132 @@
     &__divider {
       padding: vars.$gutter;
       padding-right: 2* vars.$gutter;
-      width: 80%;
+      width:100%;
       height: 10px;
       border-bottom: 1px solid vars.$secondaryColor;
+      @media(max-width:768px){
+        display: none;
+      }
     }
   }
   &__nav {
     display: flex;
-    justify-content: flex-start;
-    padding: vars.$gutter;
+    justify-content: center;
     height:4* vars.$gutter;
-    width: 50%;
-    background-color: rgba(142, 142, 142, 0.601);
-    //ul
-    &__menu{
+    min-width: 50%;
+    width: auto;
+    backdrop-filter: blur(25px);
+    @media(max-width:768px){
+      background-color: rgba(49, 49, 49, 0.278);
+      width: 60%;
+      padding-left: vars.$gutter;
+    }
+    @media(max-width:650px){
+      height: 100vh;
+      width:15* vars.$gutter ;
+      flex-direction: column;
       display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-top: -1* vars.$gutter;
+      padding-left: 3* vars.$gutter;
+      padding-top: 3* vars.$gutter;
+      position: relative;
+    }
+    // button close mobile navbar
+    &--close {
+      visibility: hidden;
+      @media(max-width:650px){
+        visibility: visible;
+        background-color: 0;
+        font-size: 2.5* vars.$gutter;
+        background:none;
+        border: none;
+        display: block;
+        color: vars.$secondaryColor;
+        background-color: none;
+        width:1.5* vars.$gutter;
+        height: 1.5* vars.$gutter;
+        position: absolute;
+        top:40px;
+        right: 60px;
+      }
+    }
+    // Burger menu open navbar mobile
+    &--open {
+      visibility: hidden;
+      @media(max-width:650px){
+        visibility: visible;
+        background-color: 0;
+        font-size: 2* vars.$gutter;
+        background:none;
+        border: none;
+        display: block;
+        color: vars.$secondaryColor;
+        background-color: none;
+        width:1.5* vars.$gutter;
+        height: 1.5* vars.$gutter;
+        position: fixed;
+        top:40px;
+        right: 50px;
+      }
+    }
+    //ul
+    &__menu {
+      display: flex;
+      justify-content: space-around;
       align-items: center;
+      width: 100%; 
+      @media(max-width:650px){
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top:2* vars.$gutter;
+      }
+      &--li{
+        display: flex;
+      }
       &--item {
         margin-right: vars.$gutter;
         font-size: 1rem;
+        text-transform: uppercase;
+        @media(max-width:650px){
+          text-align: left;
+          margin-right: 0;
+          margin-top:2* vars.$gutter;
+          width: 100%;
+        }
+        &:hover {
+        text-decoration: underline;
+        text-underline-offset: 1.5* vars.$gutter;
+        text-decoration-color: grey;
+        text-decoration-thickness: 3px;
+        @media(max-width:650px){
+          text-decoration: none;
+        }
+        }
       }
     }
-    
   }
-    
 }
-
-  .header__nav__menu--item{
-    
-    
+.span {
+  font-weight: bolder;
+  @media(max-width:768px){
+    display: none;
   }
+  @media(max-width:650px){
+    display:flex;
+    flex-wrap: nowrap;
+  }
+}
   .active {
     text-decoration: underline;
+    text-underline-offset: 1.5* vars.$gutter;
+    text-decoration-thickness: 3px;
+    @media(max-width:650px){
+      text-decoration: none;
+    }
+  }
+  pre {
+    display: flex;
   }

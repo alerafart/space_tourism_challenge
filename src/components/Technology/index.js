@@ -5,7 +5,7 @@ function Technology() {
   
   return (
     <div >
-        Technology component
+
     </div>
   );
 }
