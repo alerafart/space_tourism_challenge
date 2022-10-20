@@ -1,2 +1,46 @@
 @use '../../styles/vars';
 @use '../../styles/reset';
+
+.destination {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    height: 100vh;
+    // background-color: aqua;
+
+    &__view {
+        display: flex;
+        // align-content: center;
+        // background-color: azure;
+        width: 50%;
+        height: 80%;
+        &__h5 {
+            display: flex;
+            align-self: flex-start;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 25px;
+            color:vars.$mainColor;
+        }
+    }
+    
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 50%;
+        &--name {
+            background-color: red;
+            font-size: 6* vars.$gutter;
+        }
+        &--desc {
+            color: vars.$secondaryColor;
+        }
+    }
+    
+}
+.span {
+    font-weight: bold;
+    color: vars.$secondaryColor;
+}
