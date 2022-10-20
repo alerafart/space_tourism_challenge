@@ -7,7 +7,6 @@ import NavbarMobile from './NavbarMobile';
 import './header.scss';
 
 import useMediaQuery from "../Hooks/UseMediaQuery";
-// import data from '../../data.js';
 
 function Header() {
   // console.log(data.crew);
