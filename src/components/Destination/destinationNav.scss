@@ -1,6 +1,13 @@
-
+@use '../../styles/vars';
+@use '../../styles/reset';
 
 .destination__info__nav {
     display: flex;
     justify-content: space-around;
+    //button
+    &--link {
+        border: none;
+        background: none;
+        color: vars.$secondaryColor;
+    }
 }
