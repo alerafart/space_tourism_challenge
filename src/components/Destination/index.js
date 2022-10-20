@@ -1,13 +1,26 @@
+//dependencies
+// import { useState } from 'react';
+// import { NavLink, Link } from 'react-router-dom';
 // == Import component
-
+import DestinationNav from './DestinationNav';
 // == Import style
 import './destination.scss';
 //data
 import data from '../../data.js';
 // == Component
-function destination() {
-  console.log(data.destinations[0]);
-  console.log(data.destinations[0].name);
+function Destination() {
+  console.log(data.destinations);
+  // console.log(data.destinations[0].name);
+
+  // const [destination, setDestination]= useState(data.destinations[0]);
+  // function  handleDestinantion(e) {
+  //   setDestination(e.target.value);
+  // }
+  // let destinations = data.destinations;
+
+  // destinations.map((destination)=> {
+  //   return destination.name;
+  // })
   return (
     <div className="destination">
       <div className="destination__view">
@@ -18,6 +31,17 @@ function destination() {
         </h5>
       </div>
       <section className="destination__info">
+        <DestinationNav />  
+      {/* <nav className="destination__info__nav">
+        {
+          destinations.map((destination)=> {
+            return <Link className="destination__info__nav--link" key={destination.name}>
+                      {destination.name}
+                  </Link>;
+          })
+          
+        }
+      </nav> */}
       <h1 className="destination__info--name">
         {data.destinations[0].name}
       </h1>
@@ -30,4 +54,4 @@ function destination() {
   );
 }
 
-export default destination;
+export default Destination;

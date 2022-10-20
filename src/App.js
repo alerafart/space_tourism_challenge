@@ -8,6 +8,7 @@ import Crew from './components/Crew';
 import Technology from './components/Technology';
 import { Routes, Route } from "react-router-dom";
 // import { useState } from 'react';
+import data from './data';
 function App() {
   return (
     <div className="App">
@@ -15,7 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="home" element={<Home />} />
           <Route path="destination" element={<Destination />} />
           <Route path="crew" element={<Crew />} />
           <Route path="technology" element={<Technology />} />
