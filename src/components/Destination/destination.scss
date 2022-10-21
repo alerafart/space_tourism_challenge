@@ -8,8 +8,14 @@
     font-family: 'Bellefair', serif;
     text-transform: uppercase;
     height: 100vh;
-    // background-color: aqua;
-
+    background-image: url('../../assets/destination/background-destination-desktop.jpg');
+    background-size:cover;
+    @media(max-width:768px){
+        background-image: url('../../assets/destination/background-destination-tablet.jpg');
+    }
+    @media(max-width:650px){
+        background-image: url('../../assets/destination/background-destination-mobile.jpg');
+    }
     &__view {
         display: flex;
         // align-content: center;
