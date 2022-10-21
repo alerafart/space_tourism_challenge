@@ -32,10 +32,6 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="destination"
                  element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
-          {/* <Route path="/destination/Moon" element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
-          <Route path="/destination/Europa" element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
-          <Route path="/destination/Mars" element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
-          <Route path="/destination/Titan" element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} /> */}
           <Route path="crew" element={<Crew />} />
           <Route path="technology" element={<Technology />} />
         </Routes>

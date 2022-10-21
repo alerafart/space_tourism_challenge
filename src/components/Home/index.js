@@ -22,7 +22,7 @@ function Home() {
           </div> 
           <div className="home__right">
             <button  className="home__right__inner">
-              <NavLink to="/destination/">explore</NavLink>
+              <NavLink to="/destination">explore</NavLink>
             </button>
           </div>
         </div>       
