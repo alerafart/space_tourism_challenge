@@ -5,10 +5,12 @@ import { NavLink, Link } from 'react-router-dom';
 import DestinationNav from './DestinationNav';
 // == Import style
 import './destination.scss';
+// import * as imgs from '../../assets/destination';
+// import imagemoon from "../../assets/destination/image-moon.png";
 //data
 import data from '../../data.js';
 // == Component
-function Destination({value, setValue}) {
+function Destination({value, setValue, currentDest}) {
   // console.log(data.destinations);
   // console.log(data.destinations[0].name);
 
@@ -16,18 +18,8 @@ function Destination({value, setValue}) {
     console.log ('use effect')
   });
   
-  // let name = data.destinations.name;
-  // let desc = data.destinations.description;
-  // // let imgPng = data.destinations.images.png;
-  // // let imgWebp = data.destinations.images.webp;
-  // let travel = data.destinations.travel;
-  // let destinations = data.destinations;
-
-  // destinations.map((destination)=> {
-  //   // console.log(destination);
-  //   return destination;
-  // })
   console.log(value);
+  
   return (
     <div className="destination"
     // {style = {backgroundImage : 'value'}}
@@ -38,9 +30,12 @@ function Destination({value, setValue}) {
             <span className="span">01</span> Pick up your destination
           </pre>
         </h5>
+        <img  src={value.images.webp}
+        alt={`${value.name}pic`}
+        className="destination__view--img" />
       </div>
       <section className="destination__info">
-      <DestinationNav setValue={setValue} />  
+      <DestinationNav setValue={setValue} currentDest={currentDest} />  
 
       <h1 className="destination__info--name">
         {value.name}

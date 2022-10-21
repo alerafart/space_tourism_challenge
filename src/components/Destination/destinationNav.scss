@@ -5,13 +5,20 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    // background-color: aqua;
     height: 3rem;
+    
     //button
     &--link {
         border: none;
         background: none;
         color: vars.$secondaryColor;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+        &:hover {
+            border-bottom: 2px solid grey;
+            
+            
+        }
     }
 }
 .active {

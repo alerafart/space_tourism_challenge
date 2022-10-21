@@ -18,16 +18,30 @@
     }
     &__view {
         display: flex;
-        // align-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         // background-color: azure;
         width: 50%;
-        height: 80%;
+        margin: 3* vars.$gutter;
+        height: 70%;
         &__h5 {
             display: flex;
             align-self: flex-start;
+            width: 100%;
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 25px;
             color:vars.$mainColor;
+            // background-color: rebeccapurple;
+        }
+        &--img {
+            // background-color: bisque;
+            // display: flex;
+            // align-content: center;
+            // align-items: center;
+            // justify-content: center;
+            width: 100%;
+            height: auto;
         }
     }
     
@@ -40,7 +54,7 @@
             //subcomponent
         }
         &--name {
-            background-color: red;
+            // background-color: red;
             font-size: 6* vars.$gutter;
         }
         &--desc {
