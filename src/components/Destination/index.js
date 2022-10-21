@@ -21,9 +21,7 @@ function Destination({value, setValue, currentDest}) {
   console.log(value);
   
   return (
-    <div className="destination"
-    // {style = {backgroundImage : 'value'}}
-    >
+    <div className="destination">
       <div className="destination__view">
         <h5 className="destination__view__h5">
           <pre>
@@ -34,6 +32,7 @@ function Destination({value, setValue, currentDest}) {
         alt={`${value.name}pic`}
         className="destination__view--img" />
       </div>
+
       <section className="destination__info">
       <DestinationNav setValue={setValue} currentDest={currentDest} />  
 
@@ -43,6 +42,17 @@ function Destination({value, setValue, currentDest}) {
       <p className="destination__info--desc">
         {value.description}
       </p>
+      <div className="destination__info__travel">
+      <div className="destination__info__travel--time">
+          <p className="destination__info__travel__p">AVG. DISTANCE</p>
+          {value.travel}
+        </div>
+        <div className="destination__info__travel--dist">
+        <p className="destination__info__travel__p">Est. travel time</p>
+          {value.distance}
+        </div>
+        
+      </div>
       </section>
       
     </div>
