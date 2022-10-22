@@ -25,7 +25,7 @@ function Destination({value, setValue, currentDest}) {
       <div className="destination__view">
         <h5 className="destination__view__h5">
           <pre>
-            <span className="span">01</span>   Pick up your destination
+            <em className="em">01</em>   Pick up your destination
           </pre>
         </h5>
         <img  src={value.images.webp}

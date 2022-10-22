@@ -45,13 +45,13 @@
     }
     @media(max-width:650px){
       height: 100vh;
-      width:15* vars.$gutter ;
+      width:7* vars.$gutter ;
       flex-direction: column;
       display: flex;
       justify-content: flex-start;
       align-items: flex-end;
       margin-top: -1* vars.$gutter;
-      padding-left: 3* vars.$gutter;
+      padding-left: 2* vars.$gutter;
       padding-top: 3* vars.$gutter;
       position: relative;
     }
