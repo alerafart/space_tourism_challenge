@@ -14,18 +14,18 @@ function Destination({value, setValue, currentDest}) {
   // console.log(data.destinations);
   // console.log(data.destinations[0].name);
 
-  useEffect(() => {
-    console.log ('use effect')
-  });
+  // useEffect(() => {
+  //   console.log ('use effect')
+  // });
   
-  console.log(value);
+  // console.log(value);
   
   return (
     <div className="destination">
       <div className="destination__view">
         <h5 className="destination__view__h5">
           <pre>
-            <span className="span">01</span> Pick up your destination
+            <span className="span">01</span>   Pick up your destination
           </pre>
         </h5>
         <img  src={value.images.webp}
