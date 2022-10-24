@@ -13,6 +13,7 @@ import { useState } from 'react';
 import data from './data';
 let destinations = data.destinations;
 
+
 function App() {
   const [destinationKey, setDestinationKey]= useState('Moon');
   const [crewMember, setCrewMember]= useState('');
@@ -23,6 +24,7 @@ function App() {
     return d.name === destinationKey;
   })
   
+  
   return (
     <div className="App">
       <main className="main">
@@ -32,6 +34,7 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="destination"
                  element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
+                 {/* <Route path=''></Route> */}
           <Route path="crew" element={<Crew />} />
           <Route path="technology" element={<Technology />} />
         </Routes>

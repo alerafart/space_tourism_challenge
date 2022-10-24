@@ -1,5 +1,4 @@
 //dependencies
-import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 // == Import component
 import DestinationNav from './DestinationNav';
@@ -11,7 +10,19 @@ import './destination.scss';
 import data from '../../data.js';
 // == Component
 function Destination({value, setValue, currentDest}) {
+  //currentDest is active planet
+  // console.log(currentDest);
+  console.log(value.name);
   // console.log(data.destinations);
+  const allPlanets =data.destinations;
+
+  //function which returns an array of all planets names
+  let planetList =[];
+  allPlanets.forEach(planet => {
+    return planetList.push(planet.name);
+  });
+  // console.log(planetList);
+  // for(i=0; i)
   // console.log(data.destinations[0].name);
 
   // useEffect(() => {
@@ -34,7 +45,7 @@ function Destination({value, setValue, currentDest}) {
       </div>
 
       <section className="destination__info">
-      <DestinationNav setValue={setValue} currentDest={currentDest} />  
+      <DestinationNav setValue={setValue} currentDest={currentDest} value={value}/>  
 
       <h1 className="destination__info--name">
         {value.name}
