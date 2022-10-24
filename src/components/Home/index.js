@@ -1,8 +1,9 @@
 // Components
 // import Header from "../Header";
 //styles
+import { NavLink } from 'react-router-dom';
 import './home.scss';
-function Home() {
+function Home() { 
     return (
       <>
         <div className="home">
@@ -20,7 +21,9 @@ function Home() {
             </p>
           </div> 
           <div className="home__right">
-            <button className="home__right__inner">explore</button>
+            <button  className="home__right__inner">
+              <NavLink to="/destination">explore</NavLink>
+            </button>
           </div>
         </div>       
         
