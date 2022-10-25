@@ -1,2 +1,60 @@
 @use '../../styles/vars';
 @use '../../styles/reset';
+
+.crew {
+    display: flex;
+    // align-content: center;
+    align-items: center;
+    background-image: url('../../../public/assets/crew/background-crew-desktop.jpg');
+    height: 100vh;
+    background-size:cover;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: 'Bellefair', serif;
+    font-size: vars.$gutter;
+    
+    &__info {
+        width: 40%;
+        height: 60%;
+        padding: vars.$gutter;
+        margin-left: 5rem;
+        &__h5 {
+            color:vars.$mainColor;margin-bottom: 9* vars.$gutter;
+            // margin:  1rem 0;
+        }
+        &__role {
+            color:grey;
+            margin-bottom:  1rem ;
+        }
+        &__name {
+            // font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2* vars.$gutter;
+            margin-bottom:  2rem ;
+        }
+        &__bio {
+            color: vars.$secondaryColor;
+            line-height: 2rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            text-transform: capitalize;
+            text-align: left;
+        }
+        &__slider {
+            
+            &--link {
+            width: 10px;
+            height: 10px;           
+                
+            }
+            
+        }
+    }
+
+    &__img{
+        width: 50%;
+        margin-left: 12rem;
+        &--pic{
+            
+        }
+    }
+}

@@ -1,30 +1,32 @@
 //styles
 import './App.scss';
 // Components
-import Home from './components/Home';
-import Header from './components/Header';
-import Destination from './components/Destination';
 import Crew from './components/Crew';
+import Destination from './components/Destination';
+import Header from './components/Header';
+import Home from './components/Home';
 import Technology from './components/Technology';
 // npm
-import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
+import { Route, Routes } from "react-router-dom";
 //data
 import data from './data';
 let destinations = data.destinations;
-
+let crewMembers = data.crew;
 
 function App() {
   const [destinationKey, setDestinationKey]= useState('Moon');
-  const [crewMember, setCrewMember]= useState('');
-  const [technology, setTechnology]= useState('');
+  const [memberKey, setCrewMember]= useState('Douglas Hurley');
+  // const [technology, setTechnology]= useState('');
 
   // is destinationKey equal to d?
   const destination = destinations.find((d) => {
     return d.name === destinationKey;
   })
   
-  
+  const member = crewMembers.find((m)=> {
+    return m.name === memberKey;
+  })
   return (
     <div className="App">
       <main className="main">
@@ -35,7 +37,7 @@ function App() {
           <Route path="destination"
                  element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
                  {/* <Route path=''></Route> */}
-          <Route path="crew" element={<Crew />} />
+          <Route path="crew" element={<Crew member={member} crewMembers={crewMembers} setCrewMember={setCrewMember}/>} />
           <Route path="technology" element={<Technology />} />
         </Routes>
         
