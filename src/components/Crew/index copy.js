@@ -15,14 +15,6 @@ function Crew({member, currentMember, crewMembers, setCrewMember}) {
             <em className="em">01</em>   Meet your Crew
           </pre>
         </h5>
-        {
-          isMobile && 
-          <div className='crew__img'>
-          <img  src={member.images.webp}
-            alt={`${member.name}pic`}
-            className="crew__img--pic" />
-          </div>
-      }
         <div>
           <h4 className="crew__info__role">
             {member.role}
@@ -52,14 +44,13 @@ function Crew({member, currentMember, crewMembers, setCrewMember}) {
 
       </div>
       {
-        !isMobile && 
-        <div className='crew__img'>
-        <img  src={member.images.webp}
-          alt={`${member.name}pic`}
-          className="crew__img--pic" />
-        </div>
+        
       }
-      
+      <div className='crew__img'>
+      <img  src={member.images.webp}
+        alt={`${member.name}pic`}
+        className="crew__img--pic" />
+      </div>
     </div>
   );
 }

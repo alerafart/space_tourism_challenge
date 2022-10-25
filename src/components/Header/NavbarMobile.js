@@ -1,17 +1,12 @@
 // == Import component
-import {NavLink} from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiCloseFill } from 'react-icons/ri';
+import { NavLink } from "react-router-dom";
 // == Import style
-// import './navbarMobile.scss';
+import { useState } from 'react';
 import './header.scss';
-import {useState} from 'react';
-// import data from '../../data.js';
 
 function NavbarMobile() {
-  // console.log(data.crew);
-  // console.log(dt);
-
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
   const [burgerMenu, setBurgerMenu] = useState(true);
 
@@ -33,7 +28,9 @@ function NavbarMobile() {
         <button 
         className="header__nav--close"
         onClick={handleCloseMobileNav}
-        ><RiCloseFill /></button>
+        >
+          <RiCloseFill />
+        </button>
       }
 
       <ul className="header__nav__menu">
@@ -87,7 +84,9 @@ function NavbarMobile() {
       <button
       className="header__nav--open"
       onClick={openBurgerMenu}
-      ><GiHamburgerMenu /></button>
+      >
+        <GiHamburgerMenu />
+      </button>
     }
     </>
   );
