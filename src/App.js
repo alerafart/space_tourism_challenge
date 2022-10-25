@@ -37,7 +37,7 @@ function App() {
           <Route path="destination"
                  element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
                  {/* <Route path=''></Route> */}
-          <Route path="crew" element={<Crew member={member} crewMembers={crewMembers} setCrewMember={setCrewMember}/>} />
+          <Route path="crew" element={<Crew member={member} currentMember= {memberKey} crewMembers={crewMembers} setCrewMember={setCrewMember}/>} />
           <Route path="technology" element={<Technology />} />
         </Routes>
         

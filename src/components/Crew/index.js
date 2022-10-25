@@ -2,8 +2,8 @@
 import { SiHeadspace } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import './crew.scss';
-function Crew({member, crewMembers, setCrewMember}) {
-  console.log(crewMembers);
+function Crew({member, currentMember, crewMembers, setCrewMember}) {
+
   return (
     <div className='crew' >
       <div className="crew__info">
@@ -21,29 +21,20 @@ function Crew({member, crewMembers, setCrewMember}) {
         <p className="crew__info__bio">
         {member.bio} 
         </p>
+        {/* Slider icons to navigate through each crew Member onClick */}
         <div className="crew__info__slider">
           {
-            
               crewMembers.map((m)=> {
-                console.log(m.name);
               return <Link 
-              className="crew__info__slider--link"
+              className = {currentMember === m.name? 'crew__info__slider--link active': 'crew__info__slider--link' }
+              // className="crew__info__slider--link"
               key={m.name}
               onClick={()=> {setCrewMember(m.name)}}
-              ><SiHeadspace /></Link>
-              // <button to={destination.name}
-              //             className = {currentDest === destination.name? 'destination__info__nav--link active': 'destination__info__nav--link' }
-              //             key={destination.name}
-              //             onClick={()=>{setValue(destination.name)}}
-              //             value={destination.name}
-              //             >
-              //             {destination.name}
-              //       </button>;
+              >
+                <SiHeadspace />
+              </Link>
               })
-            
-            
           }
-          {/* <Link className="crew__info__slider--link"><SiHeadspace /></Link> */}
         
       </div>
       </div>
