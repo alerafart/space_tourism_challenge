@@ -3,10 +3,11 @@
 
 .crew {
     display: flex;
-    // align-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
     background-image: url('../../../public/assets/crew/background-crew-desktop.jpg');
     height: 100vh;
+    width: 100vw;
     background-size:cover;
     text-transform: uppercase;
     text-align: left;
@@ -14,47 +15,66 @@
     font-size: vars.$gutter;
     
     &__info {
-        width: 40%;
-        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 550px;
+        height: 70%;
+        margin-bottom: 2* vars.$gutter;
         padding: vars.$gutter;
-        margin-left: 5rem;
+        margin-left: 7rem;
         &__h5 {
-            color:vars.$mainColor;margin-bottom: 9* vars.$gutter;
-            // margin:  1rem 0;
+            color:vars.$mainColor;
+            margin-bottom: 2* vars.$gutter;
+            font-size: 28px;
         }
         &__role {
             color:grey;
             margin-bottom:  1rem ;
+            font-size: 32px;
         }
         &__name {
-            // font-family: 'Barlow Condensed', sans-serif;
-            font-size: 2* vars.$gutter;
+            font-size: 2.2* vars.$gutter;
             margin-bottom:  2rem ;
+            width: max-content;
         }
         &__bio {
+            width: 470px;
             color: vars.$secondaryColor;
             line-height: 2rem;
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 24px;
-            text-transform: capitalize;
+            font-weight: 300;
+            text-transform: none;
             text-align: left;
         }
         &__slider {
-            
+            margin-top: vars.$gutter;
+            width: 60%;
             &--link {
-            width: 10px;
-            height: 10px;           
-                
+            color: #383B4B;
+            margin: 0.5rem; 
+                &:hover {
+                    color: grey;
+                }
             }
-            
         }
     }
 
     &__img{
         width: 50%;
-        margin-left: 12rem;
+        text-align: center;
         &--pic{
             
         }
     }
+}
+.active {
+    color: vars.$mainColor;
+}
+.icon {
+    width: 1rem;
+}
+.em {
+    
 }
