@@ -38,6 +38,7 @@ function NavbarMobile() {
         className= "header__nav__menu--li"
         >
           <NavLink to="/home"
+          onClick={handleCloseMobileNav}
           className= {({ isActive }) =>
           isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
           >
@@ -48,6 +49,7 @@ function NavbarMobile() {
         </li>
         <li className= "header__nav__menu--li">
           <NavLink to="/destination"
+          onClick={handleCloseMobileNav}
             className= {({ isActive }) =>
             isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
@@ -58,6 +60,7 @@ function NavbarMobile() {
         </li>
         <li className= "header__nav__menu--li">
           <NavLink to="/crew"
+            onClick={handleCloseMobileNav}
             className= {({ isActive }) =>
             isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
@@ -69,6 +72,7 @@ function NavbarMobile() {
         <li 
           className= "header__nav__menu--li">
           <NavLink to="/technology"
+            onClick={handleCloseMobileNav}
             className= {({ isActive }) =>
             isActive ? 'header__nav__menu--item header__nav__menu--item active' : 'header__nav__menu--item'}
             >
