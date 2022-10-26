@@ -11,13 +11,15 @@ import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 //data
 import data from './data';
-let destinations = data.destinations;
-let crewMembers = data.crew;
+
+const destinations = data.destinations;
+const crewMembers = data.crew;
+const technologys = data.technology;
 
 function App() {
   const [destinationKey, setDestinationKey]= useState('Moon');
   const [memberKey, setCrewMember]= useState('Douglas Hurley');
-  // const [technology, setTechnology]= useState('');
+  const [technologyKey, setTechnology]= useState('');
 
   // is destinationKey equal to d?
   const destination = destinations.find((d) => {
@@ -27,6 +29,11 @@ function App() {
   const member = crewMembers.find((m)=> {
     return m.name === memberKey;
   })
+
+  const technology =technologys.find((t)=> {
+    return t.name === technologyKey;
+  })
+
   return (
     <div className="App">
       <main className="main">
@@ -38,7 +45,7 @@ function App() {
                  element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
                  {/* <Route path=''></Route> */}
           <Route path="crew" element={<Crew member={member} currentMember= {memberKey} crewMembers={crewMembers} setCrewMember={setCrewMember}/>} />
-          <Route path="technology" element={<Technology />} />
+          <Route path="technology" element={<Technology technology={technology} setTechnology={setTechnology} currentTech={technologyKey}/>} />
         </Routes>
         
       </main>

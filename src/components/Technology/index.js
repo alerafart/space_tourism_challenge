@@ -1,11 +1,11 @@
 // == Import style
 import './technology.scss';
 
-function Technology() {
+function Technology({technology, setTechnology, currentTech}) {
   
   return (
-    <div >
-
+    <div className='technology'>
+      
     </div>
   );
 }
