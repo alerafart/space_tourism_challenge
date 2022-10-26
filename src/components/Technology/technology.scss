@@ -14,6 +14,7 @@
     }
     @media(max-width:650px){
         background-image: url('../../../public/assets/technology/background-technology-mobile.jpg');
+        height: auto;
     }
     &__h5 {
         text-align: left;
@@ -30,7 +31,8 @@
             font-size: 26px;
         }
         @media(max-width:650px){
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
     }
     &__infos {
@@ -45,7 +47,6 @@
             align-items: center;
             @media(max-width:768px){
                 flex-direction: column;
-                
             }
             &__nav {
                 height: 250px;
@@ -58,7 +59,9 @@
                     width: 30%;
                     height: fit-content;
                     margin: 2rem 0 ;
-
+                }
+                @media(max-width:650px){
+                    width: 50%;
                 }
                 
                 &--link{
@@ -73,6 +76,10 @@
                     font-family: 'Bellefair', sans-serif;
                     font-size: 24px;
                     border: 2px solid grey;
+                    @media(max-width:650px){
+                        width: 40px;
+                        height: 40px;
+                    }
                     &:hover{
                         border: 2px solid vars.$mainColor;
                     }
@@ -95,6 +102,9 @@
                     margin-bottom: 1rem;
                     @media(max-width:768px){
                         font-size: 24px;
+                    }
+                    @media(max-width:650px){
+                        font-size: 20px;
                     }
                 }
                 &--name {
@@ -124,19 +134,29 @@
                     }
                     @media(max-width:650px){
                         font-size: 18px;
+                        width: 90%;
+                        margin: auto;
                     }
                 }
             }
         }
         &__img {
             width: fit-content;
+            height: fit-content;
             text-align: right;
             @media(max-width:768px){
             //  width: 100%;
             }
+            @media(max-width:650px){
+                object-fit: cover;
+            }
             &--pic {
                 width: 100%;
                 object-fit: scale-down;
+                @media(max-width:650px){
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
