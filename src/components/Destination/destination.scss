@@ -3,7 +3,6 @@
 
 .destination {
     display: flex;
-    // justify-content: space-around;
     align-items: flex-end;
     font-family: 'Bellefair', serif;
     text-transform: uppercase;
@@ -43,9 +42,9 @@
             align-self: flex-start;
             width: 100%;
             font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 300;
             font-size: 25px;
             color:vars.$mainColor;
-            // background-color: rebeccapurple;
             @media(max-width:768px){
                 margin-bottom:3* vars.$gutter;
                 align-self: center;
@@ -69,12 +68,9 @@
         padding: 2* vars.$gutter vars.$gutter;
         display: flex;
         flex-direction: column;
-        // max-width: 600px;
-        // max-width: 400px;
         width: 50%;
         height: fit-content;
         margin: 3* vars.$gutter vars.$gutter;
-        // background-color: rgb(43, 43, 41);
         @media(max-width:768px){
             width: 80%;
             margin-top: 0;
@@ -90,9 +86,8 @@
             //subcomponent
         }
         &--name {
-            // background-color: red;
             font-size: 6* vars.$gutter;
-            // font-size: max(6* vars.$gutter, 1vw);
+            
             @media(max-width:650px){
                 font-size: 4* vars.$gutter;
                 margin-bottom: vars.$gutter;
@@ -103,6 +98,11 @@
             padding-bottom: 3rem;
             border-bottom: 1px solid #383B4B;
             line-height: 2rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            text-transform: capitalize;
+            text-align: left;
+
         }
         &__travel {
             display: flex;
@@ -141,7 +141,5 @@
 }
 .em {
     font-weight: bold;
-    color: vars.$secondaryColor;
-    // display: block;
     color: #383B4B;
 }

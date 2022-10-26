@@ -1,10 +1,8 @@
 // == Import component
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // == Import style
 import './header.scss';
-// import {useState} from 'react';
-// import data from '../../data.js';
 
 function NavbarDesktop() {
 

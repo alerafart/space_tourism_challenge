@@ -1,5 +1,5 @@
 // == Import component
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from '../../assets/shared/logo.svg';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
@@ -9,12 +9,9 @@ import './header.scss';
 import useMediaQuery from "../Hooks/UseMediaQuery";
 
 function Header() {
-  // console.log(data.crew);
-  // console.log(dt);
-
   // for conditional display of navbar desktop or mobile
   // hook which listens for the screen with
-  const isDesktop = useMediaQuery('(min-width: 650px)');
+  const isDesktop = useMediaQuery('(min-width: 651px)');
 
   return (
     <header className="header">
