@@ -1,5 +1,4 @@
 //dependencies
-import { NavLink, Link } from 'react-router-dom';
 // == Import component
 import DestinationNav from './DestinationNav';
 // == Import style
@@ -21,15 +20,6 @@ function Destination({value, setValue, currentDest}) {
   allPlanets.forEach(planet => {
     return planetList.push(planet.name);
   });
-  // console.log(planetList);
-  // for(i=0; i)
-  // console.log(data.destinations[0].name);
-
-  // useEffect(() => {
-  //   console.log ('use effect')
-  // });
-  
-  // console.log(value);
   
   return (
     <div className="destination">
@@ -47,9 +37,9 @@ function Destination({value, setValue, currentDest}) {
       <section className="destination__info">
       <DestinationNav setValue={setValue} currentDest={currentDest} value={value}/>  
 
-      <h1 className="destination__info--name">
+      <h2 className="destination__info--name">
         {value.name}
-      </h1>
+      </h2>
       <p className="destination__info--desc">
         {value.description}
       </p>

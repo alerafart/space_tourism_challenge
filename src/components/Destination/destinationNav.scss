@@ -3,28 +3,34 @@
 
 .destination__info__nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     height: 3rem;
     margin-bottom: vars.$gutter;  
     @media(max-width:768px){
-        width: 100%;
+        width: 80%;
         margin-bottom: vars.$gutter;     
+        justify-content: space-around;
     }
     //button
     &--link {
         border: none;
         background: none;
+        margin-right:  vars.$gutter;
         color: vars.$secondaryColor;
         text-transform: uppercase;
         padding-bottom: 0.9rem;
         font-size: 1rem;
+        @media(max-width:768px){
+             margin-right: 0;
+        }
         &:hover {
             border-bottom: 2px solid grey;
         }
     }
 }
-.active {
+.activeDest {
+    color: vars.$mainColor;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-thickness: 3px;

@@ -27,7 +27,6 @@
         padding:vars.$gutter ;
         height: fit-content;
         min-height: 70%;
-        // background-color: rgb(67, 68, 68);
         @media(max-width:768px){
             width: 100%;
             margin: 7* vars.$gutter vars.$gutter;
@@ -86,7 +85,8 @@
             //subcomponent
         }
         &--name {
-            font-size: 6* vars.$gutter;
+            font-size: 100px;
+            text-align: left;
             
             @media(max-width:650px){
                 font-size: 4* vars.$gutter;
@@ -99,10 +99,10 @@
             border-bottom: 1px solid #383B4B;
             line-height: 2rem;
             font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 300;;
             font-size: 24px;
             text-transform: capitalize;
             text-align: left;
-
         }
         &__travel {
             display: flex;

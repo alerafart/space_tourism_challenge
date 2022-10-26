@@ -10,33 +10,37 @@ function Technology({technology, technologies, setTechnology, currentTech}) {
   return (
     <div className='technology'>
       <h5 className='technology__h5'>
-        03 Space launch 101
+        <pre>
+          <em className="em">03 </em> Space launch 101
+        </pre> 
       </h5>
       <div className='technology__infos'>
-        <div>
-          <nav className='technology__infos__nav'>
-          {
-              technologies.map((t,index)=> {
-                console.log(index);
-              return <Link 
-              className = {currentTech === t.name? 'technology__infos__nav--link active': 'technology__infos__nav--link' }
-              key={t.index}
-              onClick={()=> {setTechnology(t.name)}}
-              >
-               {index}
-              </Link>
-              })
-          }
+        <div className='technology__infos__container'>
+          <nav className='technology__infos__container__nav'>
+            {
+                technologies.map((t,index)=> {
+                  console.log(index);
+                return <Link 
+                className = {currentTech === t.name? 'technology__infos__container__nav--link activeTec': 'technology__infos__container__nav--link' }
+                key={t.index}
+                onClick={()=> {setTechnology(t.name)}}
+                >
+                {index}
+                </Link>
+                })
+            }
           </nav>
-          <section className='technology__infos_data'>
-            <h3 className='technology__infos_data--name'>
+          <section className='technology__infos__container__data'>
+            <h4 className='technology__infos__container__data__h4'>The terminology...</h4>
+            <h3 className='technology__infos__container__data--name'>
               {technology.name}
             </h3>
-            <p className='technology__infos_data--desc'>
+            <p className='technology__infos__container__data--desc'>
             {technology.description}
             </p>
           </section>
         </div>
+
         <div className='technology__infos__img'>
           {
             !isMobile && 

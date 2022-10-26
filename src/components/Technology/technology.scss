@@ -4,32 +4,85 @@
 .technology {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    // align-content: flex-start;
     height: 100vh;
+    padding-left: 10rem;
     
     &__h5 {
+        text-align: left;
         width: 100%;
-        background-color: aqua;
+        margin-top: 10rem;
+        color:vars.$mainColor;
+        font-size: 32px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     &__infos {
-        &__nav {
-            height: 200px;
-            
-            &--link{
-                width: 50px;
-                height: 50px;
-                color: azure;
+        display: flex;
+        // background-color: blanchedalmond;
+
+        &__container {
+            display: flex;
+            width: 60%;
+            &__nav {
+                display: flex;
+                flex-direction: column;
+                width: 15%;
+                
+                &--link{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: black;
+                    color: vars.$mainColor;
+                    border: 1px solid grey;
+                    &:hover{
+                        // background-color: black;
+                        border: 1px solid vars.$mainColor;
+
+                    }
+                }
+            }
+            &__data {
+                height: 500px;
+                width: 50%;
+                text-align: left;
+                &__h4{
+                    font-family: 'Barlow Condensed', sans-serif;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    color: vars.$secondaryColor;
+                    // text-align: left;
+                }
+                &--name {
+                    font-family: 'Bellefair', sans-serif;
+                    text-transform: uppercase;
+                    font-size: 56px;
+                    // text-align: left;
+                }
+                &--desc {
+                    font-family: 'Barlow Condensed', sans-serif;
+                    font-size: 24px;
+                    font-weight: 300;
+                    text-transform: none;
+                    // text-align: left;
+                    color: vars.$secondaryColor;
+                }
             }
         }
-        &__data {
-            height: 500px;
-            &--name {
-    
-            }
-            &--desc {
-    
-            }
-        }
+        
     }
     
+}
+
+.activeTec {
+    color: black;
+    background-color: vars.$mainColor;
+    
+
 }
