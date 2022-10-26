@@ -14,12 +14,12 @@ import data from './data';
 
 const destinations = data.destinations;
 const crewMembers = data.crew;
-const technologys = data.technology;
+const technologies = data.technology;
 
 function App() {
   const [destinationKey, setDestinationKey]= useState('Moon');
   const [memberKey, setCrewMember]= useState('Douglas Hurley');
-  const [technologyKey, setTechnology]= useState('');
+  const [technologyKey, setTechnology]= useState('Launch vehicle');
 
   // is destinationKey equal to d?
   const destination = destinations.find((d) => {
@@ -30,7 +30,7 @@ function App() {
     return m.name === memberKey;
   })
 
-  const technology =technologys.find((t)=> {
+  const technology =technologies.find((t)=> {
     return t.name === technologyKey;
   })
 
@@ -44,8 +44,19 @@ function App() {
           <Route path="destination"
                  element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
                  {/* <Route path=''></Route> */}
-          <Route path="crew" element={<Crew member={member} currentMember= {memberKey} crewMembers={crewMembers} setCrewMember={setCrewMember}/>} />
-          <Route path="technology" element={<Technology technology={technology} setTechnology={setTechnology} currentTech={technologyKey}/>} />
+          <Route path="crew"
+            element={<Crew
+            member={member}
+            currentMember= {memberKey}
+            crewMembers={crewMembers}
+            setCrewMember={setCrewMember}/>} />
+
+          <Route path="technology"
+            element={<Technology
+            technology={technology}
+            technologies={technologies}
+            setTechnology={setTechnology}
+            currentTech={technologyKey}/>} />
         </Routes>
         
       </main>
