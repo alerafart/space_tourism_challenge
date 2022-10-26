@@ -44,11 +44,11 @@ function Technology({technology, technologies, setTechnology, currentTech}) {
         <div className='technology__infos__img'>
           {
             !isMobile && 
-            <img src={technology.images.portrait} alt={technology.images.webp}></img>
+            <img src={technology.images.portrait} alt={technology.images.webp} className='technology__infos__img--pic'></img>
           }
           {
             isMobile && 
-            <img src={technology.images.landscape} alt={technology.images.webp}></img>
+            <img src={technology.images.landscape} alt={technology.images.webp} className='technology__infos__img--pic'></img>
           }
           
         </div>

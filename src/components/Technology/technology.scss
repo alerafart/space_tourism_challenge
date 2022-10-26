@@ -5,10 +5,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    // align-content: flex-start;
     height: 100vh;
-    padding-left: 10rem;
-    
+    padding-left: 6rem;
+    background-image: url('../../../public/assets/technology/background-technology-desktop.jpg');
+    @media(max-width:768px){
+        
+    }
+    @media(max-width:650px){
+        
+    }
     &__h5 {
         text-align: left;
         width: 100%;
@@ -21,15 +26,22 @@
     }
     &__infos {
         display: flex;
-        // background-color: blanchedalmond;
-
+        justify-content: space-between;
         &__container {
             display: flex;
-            width: 60%;
+            align-content: center;
+            align-items: center;
+            // height: 70%;
+            // border: 1px solid blue;
             &__nav {
+                // margin-top: 3rem;
+                height: 250px;
                 display: flex;
                 flex-direction: column;
-                width: 15%;
+                justify-content: space-between;
+                // height: 15rem;
+                width: 80px;
+                // background-color: antiquewhite;
                 
                 &--link{
                     display: flex;
@@ -40,42 +52,55 @@
                     border-radius: 50%;
                     background-color: black;
                     color: vars.$mainColor;
-                    border: 1px solid grey;
+                    font-family: 'Bellefair', sans-serif;
+                    font-size: 24px;
+                    border: 2px solid grey;
                     &:hover{
-                        // background-color: black;
-                        border: 1px solid vars.$mainColor;
-
+                        border: 2px solid vars.$mainColor;
                     }
                 }
             }
             &__data {
-                height: 500px;
-                width: 50%;
+                height: 300px;
+                // border: 1px solid blue;
+                margin-top: 3rem;
+                // width: 60%;
                 text-align: left;
-                &__h4{
-                    font-family: 'Barlow Condensed', sans-serif;
-                    font-size: 1rem;
+                font-family: 'Barlow Condensed', sans-serif;
+                &__h4 {
+                    font-size: 28px;
+                    font-weight: 100;
                     text-transform: uppercase;
                     color: vars.$secondaryColor;
-                    // text-align: left;
+                    margin-bottom: 1rem;
                 }
                 &--name {
                     font-family: 'Bellefair', sans-serif;
                     text-transform: uppercase;
                     font-size: 56px;
-                    // text-align: left;
+                    width: max-content;
+                    margin-bottom: 1rem;
                 }
                 &--desc {
-                    font-family: 'Barlow Condensed', sans-serif;
+                    width: 450px;
+                    font-weight: 100;
                     font-size: 24px;
-                    font-weight: 300;
+                    font-weight: 200;
                     text-transform: none;
-                    // text-align: left;
                     color: vars.$secondaryColor;
                 }
             }
         }
-        
+        &__img {
+            // border:1px solid aqua;
+            width: fit-content;
+            // height: 70%;
+            text-align: right;
+            &--pic {
+                width: 100%;
+                object-fit: scale-down;
+            }
+        }
     }
     
 }
@@ -83,6 +108,6 @@
 .activeTec {
     color: black;
     background-color: vars.$mainColor;
-    
+    border: none;
 
 }
