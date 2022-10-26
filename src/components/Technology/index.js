@@ -6,7 +6,7 @@ import useMediaQuery from "../Hooks/UseMediaQuery";
 
 function Technology({technology, technologies, setTechnology, currentTech}) {
   console.log(technologies);
-  const isMobile = useMediaQuery('(max-width: 650px)');
+  const isDesktop = useMediaQuery('(max-width: 768px)');
   return (
     <div className='technology'>
       <h5 className='technology__h5'>
@@ -43,11 +43,11 @@ function Technology({technology, technologies, setTechnology, currentTech}) {
 
         <div className='technology__infos__img'>
           {
-            !isMobile && 
+            !isDesktop && 
             <img src={technology.images.portrait} alt={technology.images.webp} className='technology__infos__img--pic'></img>
           }
           {
-            isMobile && 
+            isDesktop && 
             <img src={technology.images.landscape} alt={technology.images.webp} className='technology__infos__img--pic'></img>
           }
           

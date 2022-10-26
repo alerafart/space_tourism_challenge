@@ -9,10 +9,11 @@
     padding-left: 6rem;
     background-image: url('../../../public/assets/technology/background-technology-desktop.jpg');
     @media(max-width:768px){
-        
+        background-image: url('../../../public/assets/technology/background-technology-tablet.jpg');
+        padding-left: 0;
     }
     @media(max-width:650px){
-        
+        background-image: url('../../../public/assets/technology/background-technology-mobile.jpg');
     }
     &__h5 {
         text-align: left;
@@ -23,25 +24,42 @@
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 300;
         text-transform: uppercase;
+        @media(max-width:768px){
+            padding-left: vars.$gutter;
+            margin:6 *vars.$gutter 0 2rem;
+            font-size: 26px;
+        }
+        @media(max-width:650px){
+            text-align: center;
+        }
     }
     &__infos {
         display: flex;
         justify-content: space-between;
+        @media(max-width:768px){
+            flex-direction: column-reverse;
+        }
         &__container {
             display: flex;
             align-content: center;
             align-items: center;
-            // height: 70%;
-            // border: 1px solid blue;
+            @media(max-width:768px){
+                flex-direction: column;
+                
+            }
             &__nav {
-                // margin-top: 3rem;
                 height: 250px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                // height: 15rem;
                 width: 80px;
-                // background-color: antiquewhite;
+                @media(max-width:768px){
+                    flex-direction: row;
+                    width: 30%;
+                    height: fit-content;
+                    margin: 2rem 0 ;
+
+                }
                 
                 &--link{
                     display: flex;
@@ -62,17 +80,22 @@
             }
             &__data {
                 height: 300px;
-                // border: 1px solid blue;
                 margin-top: 3rem;
-                // width: 60%;
                 text-align: left;
                 font-family: 'Barlow Condensed', sans-serif;
+                @media(max-width:768px){
+                    margin: 0;
+                    text-align: center;
+                }
                 &__h4 {
                     font-size: 28px;
                     font-weight: 100;
                     text-transform: uppercase;
                     color: vars.$secondaryColor;
                     margin-bottom: 1rem;
+                    @media(max-width:768px){
+                        font-size: 24px;
+                    }
                 }
                 &--name {
                     font-family: 'Bellefair', sans-serif;
@@ -80,6 +103,13 @@
                     font-size: 56px;
                     width: max-content;
                     margin-bottom: 1rem;
+                    @media(max-width:768px){
+                        width: 100%;
+                        font-size: 40px;
+                    }
+                    @media(max-width:650px){
+                        font-size: 28px;
+                    }
                 }
                 &--desc {
                     width: 450px;
@@ -88,14 +118,22 @@
                     font-weight: 200;
                     text-transform: none;
                     color: vars.$secondaryColor;
+                    line-height: 2rem;
+                    @media(max-width:768px){
+                        font-size: 20px;
+                    }
+                    @media(max-width:650px){
+                        font-size: 18px;
+                    }
                 }
             }
         }
         &__img {
-            // border:1px solid aqua;
             width: fit-content;
-            // height: 70%;
             text-align: right;
+            @media(max-width:768px){
+            //  width: 100%;
+            }
             &--pic {
                 width: 100%;
                 object-fit: scale-down;

@@ -69,9 +69,9 @@
             color:grey;
             margin-bottom:  1rem ;
             font-size: 32px;
-            @media(max-width:650px){
-                // order:2;
-            }
+            // @media(max-width:650px){
+
+            // }
         }
         &__name {
             font-size: 2.2* vars.$gutter;
@@ -128,7 +128,6 @@
             border-bottom: 1px solid #383B4B;
             margin-bottom: vars.$gutter;
             order:-4;
-            // width: 500px;
             height: 500px;
         }
         &--pic{
