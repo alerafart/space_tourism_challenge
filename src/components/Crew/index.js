@@ -1,15 +1,16 @@
 // == Import style
-import './crew.scss';
-
 import { SiHeadspace } from 'react-icons/si';
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 import useMediaQuery from "../Hooks/UseMediaQuery";
-
+import './crew.scss';
 function Crew({member, currentMember, crewMembers, setCrewMember}) {
   const isMobile = useMediaQuery('(max-width: 650px)');
   console.log(crewMembers);//array of objects below
   console.log(member);//object 
   return (
+    <>
+    <Header />
     <div className='crew' >
       <div className="crew__info">
         <h5 className="crew__info__h5">
@@ -62,6 +63,7 @@ function Crew({member, currentMember, crewMembers, setCrewMember}) {
           </div>
         }
       </div>
+      </>
   );
 }
 

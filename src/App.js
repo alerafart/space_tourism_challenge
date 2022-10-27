@@ -3,7 +3,6 @@ import './App.scss';
 // Components
 import Crew from './components/Crew';
 import Destination from './components/Destination';
-import Header from './components/Header';
 import Home from './components/Home';
 import Technology from './components/Technology';
 // npm
@@ -37,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <main className="main">
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />

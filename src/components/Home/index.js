@@ -1,11 +1,12 @@
 // Components
 import { NavLink } from 'react-router-dom';
 //styles
+import Header from '../Header';
 import './home.scss';
-
 function Home() { 
     return (
       <>
+      <Header />
         <div className="home">
           <div className="home__left">
             <h5 className="home__left__h5">
