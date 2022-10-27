@@ -11,13 +11,15 @@ import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 //data
 import data from './data';
-let destinations = data.destinations;
-let crewMembers = data.crew;
+
+const destinations = data.destinations;
+const crewMembers = data.crew;
+const technologies = data.technology;
 
 function App() {
   const [destinationKey, setDestinationKey]= useState('Moon');
   const [memberKey, setCrewMember]= useState('Douglas Hurley');
-  // const [technology, setTechnology]= useState('');
+  const [technologyKey, setTechnology]= useState('Launch vehicle');
 
   // is destinationKey equal to d?
   const destination = destinations.find((d) => {
@@ -27,6 +29,11 @@ function App() {
   const member = crewMembers.find((m)=> {
     return m.name === memberKey;
   })
+
+  const technology =technologies.find((t)=> {
+    return t.name === technologyKey;
+  })
+
   return (
     <div className="App">
       <main className="main">
@@ -35,14 +42,24 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="destination"
-                 element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
-                 {/* <Route path=''></Route> */}
-          <Route path="crew" element={<Crew member={member} currentMember= {memberKey} crewMembers={crewMembers} setCrewMember={setCrewMember}/>} />
-          <Route path="technology" element={<Technology />} />
+                 element={<Destination
+                 value={destination}
+                 currentDest={destinationKey}
+                 setValue={setDestinationKey} />} />
+          <Route path="crew"
+                 element={<Crew
+                 member={member}
+                 currentMember= {memberKey}
+                 crewMembers={crewMembers}
+                 setCrewMember={setCrewMember}/>} />
+          <Route path="technology"
+                 element={<Technology
+                 technology={technology}
+                 technologies={technologies}
+                 setTechnology={setTechnology}
+                 currentTech={technologyKey}/>} />
         </Routes>
-        
       </main>
-      
     </div>
   );
 }

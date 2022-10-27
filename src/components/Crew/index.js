@@ -7,6 +7,8 @@ import useMediaQuery from "../Hooks/UseMediaQuery";
 
 function Crew({member, currentMember, crewMembers, setCrewMember}) {
   const isMobile = useMediaQuery('(max-width: 650px)');
+  console.log(crewMembers);//array of objects below
+  console.log(member);//object 
   return (
     <div className='crew' >
       <div className="crew__info">
@@ -51,16 +53,15 @@ function Crew({member, currentMember, crewMembers, setCrewMember}) {
       </div>
 
       </div>
-      {
-        !isMobile && 
-        <div className='crew__img'>
-        <img  src={member.images.webp}
-          alt={`${member.name}pic`}
-          className="crew__img--pic" />
-        </div>
-      }
-      
-    </div>
+        {
+          !isMobile && 
+          <div className='crew__img'>
+          <img  src={member.images.webp}
+            alt={`${member.name}pic`}
+            className="crew__img--pic" />
+          </div>
+        }
+      </div>
   );
 }
 

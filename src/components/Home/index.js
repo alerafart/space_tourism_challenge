@@ -1,8 +1,8 @@
 // Components
-// import Header from "../Header";
-//styles
 import { NavLink } from 'react-router-dom';
+//styles
 import './home.scss';
+
 function Home() { 
     return (
       <>
