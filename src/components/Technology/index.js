@@ -2,12 +2,14 @@
 import './technology.scss';
 //
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 import useMediaQuery from "../Hooks/UseMediaQuery";
-
 function Technology({technology, technologies, setTechnology, currentTech}) {
   console.log(technologies);
   const isDesktop = useMediaQuery('(max-width: 768px)');
   return (
+    <>
+    <Header />
     <div className='technology'>
       <h5 className='technology__h5'>
         <pre>
@@ -54,6 +56,7 @@ function Technology({technology, technologies, setTechnology, currentTech}) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

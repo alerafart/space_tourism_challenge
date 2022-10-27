@@ -85,6 +85,7 @@ function NavbarMobile() {
       </nav>
     }
     { !mobileNavVisible &&
+    
       <button
       className="header__nav--open"
       onClick={openBurgerMenu}

@@ -11,12 +11,22 @@
   position: fixed;
   top: 20px;
   width: 100%;
+  padding-right: 10% 0;
 
+  @media(max-width:650px){
+    text-align: center;
+    padding-left: 5%;
+    width: 100%;
+  }
+  
   &__left {
     display: flex;
     flex-grow: 2;
     padding-right:2* vars.$gutter;
-
+    @media(max-width:650px){
+      justify-content: space-between;
+    }
+    
     &__logo {
       padding: vars.$gutter;
     }
@@ -52,9 +62,8 @@
       justify-content: flex-start;
       align-items: flex-end;
       margin-top: -1* vars.$gutter;
-      padding-left: 2* vars.$gutter;
+      padding-left: vars.$gutter;
       padding-top: 3* vars.$gutter;
-      position: relative;
     }
     // button close mobile navbar
     &--close {
@@ -71,8 +80,8 @@
         width:1.5* vars.$gutter;
         height: 1.5* vars.$gutter;
         position: absolute;
-        top:40px;
-        right: 60px;
+        top:34px;
+        right: 42px;
       }
     }
     // Burger menu open navbar mobile
@@ -87,11 +96,7 @@
         display: block;
         color: vars.$secondaryColor;
         background-color: none;
-        width:1.5* vars.$gutter;
-        height: 1.5* vars.$gutter;
-        position: fixed;
-        top:40px;
-        right: 50px;
+        margin-right: 2%;
       }
     }
     //ul
