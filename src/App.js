@@ -42,25 +42,24 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="destination"
-                 element={<Destination value={destination} currentDest={destinationKey} setValue={setDestinationKey} />} />
-                 {/* <Route path=''></Route> */}
+                 element={<Destination
+                 value={destination}
+                 currentDest={destinationKey}
+                 setValue={setDestinationKey} />} />
           <Route path="crew"
-            element={<Crew
-            member={member}
-            currentMember= {memberKey}
-            crewMembers={crewMembers}
-            setCrewMember={setCrewMember}/>} />
-
+                 element={<Crew
+                 member={member}
+                 currentMember= {memberKey}
+                 crewMembers={crewMembers}
+                 setCrewMember={setCrewMember}/>} />
           <Route path="technology"
-            element={<Technology
-            technology={technology}
-            technologies={technologies}
-            setTechnology={setTechnology}
-            currentTech={technologyKey}/>} />
+                 element={<Technology
+                 technology={technology}
+                 technologies={technologies}
+                 setTechnology={setTechnology}
+                 currentTech={technologyKey}/>} />
         </Routes>
-        
       </main>
-      
     </div>
   );
 }
