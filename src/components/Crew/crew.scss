@@ -23,6 +23,7 @@
     }       
         
     @media(max-width:650px){
+        width: fit-content;
         background-image: url('../../../public/assets/crew/background-crew-mobile.jpg');
     }
     
@@ -38,12 +39,14 @@
         @media(max-width:768px){
             align-self: center;
             margin-top: 9rem;
-            width: 100%;
+            width: 100vw;
             margin:  9rem 0 2rem;
             align-items: center;
         }
         @media(max-width:650px){
             margin-top: 4* vars.$gutter;
+            margin-bottom: 0;
+            width: 100vw;
 
         }
         &__h5 {
@@ -116,24 +119,29 @@
         }
     }
 
-    &__img{
+    &__img {
         width: 50%;
         text-align: center;
         @media(max-width:768px){
             display: flex;
             justify-content: center;
             width: 95%;
+            // object-fit: scale-down;
         }
         @media(max-width:650px){
             border-bottom: 1px solid #383B4B;
             margin-bottom: vars.$gutter;
             order:-4;
-            height: 500px;
+            height: auto;
+            width: 90%;
+            border: 1px solid salmon;
+            background-color: aqua;
         }
         &--pic{
             @media(max-width:650px){
-                object-fit: scale-down;
-                padding: 0 5rem;
+                width: 100%;
+                // object-fit: scale-down;
+                border: 1px solid salmon;
             }
         }
     }

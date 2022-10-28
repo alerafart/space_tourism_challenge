@@ -19,7 +19,8 @@
     }
     @media(max-width:650px){
         background-image: url("../../assets/home/background-home-mobile.jpg");
-        width: 100vw;
+        width: auto;
+        height: 100vh;
     }
     &__left {
         height: 50%;
@@ -61,7 +62,8 @@
             text-transform: uppercase;
             padding: vars.$gutter 0;
             @media(max-width:650px){
-                font-size: 100px;
+                height: auto;
+                font-size: 2em;
             }
         }
         &__p {
@@ -91,6 +93,9 @@
         border: 52px solid rgba(254, 252, 252, 0);
         @media(max-width:768px){
             margin-bottom: 0.5* vars.$gutter;
+        }
+        @media(max-width:768px){
+            // margin-bottom: 0;
         }
         &:hover {
             border: 52px solid rgba(254, 252, 252, 0.1);
