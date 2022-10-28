@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    // height: 100vh;
+    height: 100vh;
     padding-left: 6rem;
     background-image: url('../../../public/assets/technology/background-technology-desktop.jpg') ;
     background-size:cover;
@@ -13,14 +13,14 @@
     @media(max-width:768px){
         background-image: url('../../../public/assets/technology/background-technology-tablet.jpg');
         padding-left: 0;
-        // height: 100vh;
-        
+        height: auto;
     }
     @media(max-width:650px){
         background-image: url('../../../public/assets/technology/background-technology-mobile.jpg') ;
-        // height: 100vh;
         justify-content: center;
-    }
+        padding-bottom: 2rem;
+        width: 100%;
+        }
     &__h5 {
         text-align: left;
         width: 100%;
@@ -69,7 +69,6 @@
                 @media(max-width:650px){
                     width: 50%;
                 }
-                
                 &--link{
                     display: flex;
                     justify-content: center;
@@ -142,24 +141,21 @@
                         font-size: 18px;
                         width: 90%;
                         margin: auto;
+                        padding:0  2rem ;
                     }
                 }
             }
         }
         &__img {
-            // width: 100%;
             height: fit-content;
             text-align: right;
-            // border: 1px solid red;
             @media(max-width:650px){
                 width: 100%;
-                // height: 100%;
             }
             &--pic {
 
                 @media(max-width:650px){
                     width: 100%;
-                    // height: 100%;
                 }
             }
         }
