@@ -20,7 +20,7 @@ function Destination({value, setValue, currentDest}) {
   
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div className="destination">
       <div className="destination__view">
         <h5 className="destination__view__h5">

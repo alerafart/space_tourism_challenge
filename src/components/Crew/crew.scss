@@ -63,7 +63,7 @@
             }
             @media(max-width:650px){
                 order:-5;
-                margin-bottom:2* vars.$gutter;
+                margin-bottom:vars.$gutter;
                 display: flex;
                 justify-content: center;
             }
@@ -101,6 +101,9 @@
                 text-align: center;
                 font-weight: 200;
             }
+            @media(max-width:650px){
+                padding:  1rem;
+            }
         }
         &__slider {
             margin-top: vars.$gutter;
@@ -115,6 +118,11 @@
                 &:hover {
                 color: grey;
                 }
+                @media(max-width:650px){
+                    &:hover {
+                        color: vars.$mainColor;
+                        }
+                }  
             }
         }
     }
@@ -131,22 +139,23 @@
         @media(max-width:650px){
             border-bottom: 1px solid #383B4B;
             margin-bottom: vars.$gutter;
+            // margin-top: 5rem;
             order:-4;
             height: auto;
             width: 90%;
-            border: 1px solid salmon;
-            background-color: aqua;
+            // border: 1px solid salmon;
+            // background-color: aqua;
         }
         &--pic{
             @media(max-width:650px){
                 width: 100%;
                 // object-fit: scale-down;
-                border: 1px solid salmon;
+                // border: 1px solid salmon;
             }
         }
     }
 }
-.active {
+.activeCrew {
     color: vars.$mainColor;
 }
 .icon {
