@@ -5,6 +5,7 @@ import Crew from './components/Crew';
 import Destination from './components/Destination';
 import Home from './components/Home';
 import Technology from './components/Technology';
+import Header from './components/Header';
 // npm
 import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
@@ -36,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <main className="main">
-        {/* <Header /> */}
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />

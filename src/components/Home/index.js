@@ -6,7 +6,7 @@ import './home.scss';
 function Home() { 
     return (
       <>
-      <Header />
+      {/* <Header /> */}
         <div className="home">
           <div className="home__left">
             <h5 className="home__left__h5">

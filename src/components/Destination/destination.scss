@@ -16,6 +16,7 @@
     }
     @media(max-width:650px){
         background-image: url('../../../public/assets/destination/background-destination-mobile.jpg');
+        // height: 100vh;
     }
     &__view {
         display: flex;
@@ -88,8 +89,8 @@
             font-size: 100px;
             text-align: left;
             @media(max-width:650px){
-                font-size: 4* vars.$gutter;
-                margin-bottom: vars.$gutter;
+                font-size: 2.5* vars.$gutter;
+                margin-bottom: 1rem;
             }
         }
         &--desc {
@@ -104,8 +105,8 @@
             text-align: left;
             @media(max-width:650px){
                 text-align: center;
-                padding-left: 5% ;
-                padding-right: 5% ;
+                padding: 0 2rem 1rem;
+                font-size: 18px;
             }
         }
         

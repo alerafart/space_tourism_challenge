@@ -19,7 +19,7 @@
     }
     @media(max-width:650px){
         background-image: url("../../assets/home/background-home-mobile.jpg");
-        width: 100vw;
+        width: auto;
     }
     &__left {
         height: 50%;
@@ -38,7 +38,8 @@
         }
         @media(max-width:650px){
             width: 90%;
-            margin-top: 8* vars.$gutter;
+            margin-top:6.5em;
+            height: fit-content;
         }
         
         &__h5 {
@@ -54,6 +55,7 @@
             }
             @media(max-width:650px){
                 font-size: 20px;
+                padding: 1rem 2rem 0;
             }
         }
         &__h1 {
@@ -61,7 +63,8 @@
             text-transform: uppercase;
             padding: vars.$gutter 0;
             @media(max-width:650px){
-                font-size: 100px;
+                height: auto;
+                font-size: 2em;
             }
         }
         &__p {
@@ -91,6 +94,9 @@
         border: 52px solid rgba(254, 252, 252, 0);
         @media(max-width:768px){
             margin-bottom: 0.5* vars.$gutter;
+        }
+        @media(max-width:768px){
+            // margin-bottom: 0;
         }
         &:hover {
             border: 52px solid rgba(254, 252, 252, 0.1);

@@ -9,7 +9,7 @@ function Technology({technology, technologies, setTechnology, currentTech}) {
   const isDesktop = useMediaQuery('(max-width: 768px)');
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div className='technology'>
       <h5 className='technology__h5'>
         <pre>
