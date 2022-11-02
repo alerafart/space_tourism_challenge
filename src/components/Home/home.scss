@@ -20,6 +20,9 @@
     @media(max-width:650px){
         background-image: url("../../assets/home/background-home-mobile.jpg");
         width: auto;
+        height: 100vh;
+        background-size:cover;
+
     }
     &__left {
         height: 50%;
@@ -95,8 +98,8 @@
         @media(max-width:768px){
             margin-bottom: 0.5* vars.$gutter;
         }
-        @media(max-width:768px){
-            // margin-bottom: 0;
+        @media(max-width:650px){
+            padding-bottom: 2rem;
         }
         &:hover {
             border: 52px solid rgba(254, 252, 252, 0.1);
