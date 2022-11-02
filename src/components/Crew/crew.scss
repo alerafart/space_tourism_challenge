@@ -111,6 +111,9 @@
             }
             &--link {
             color: #383B4B;
+            @media(max-width:650px){
+                color: grey;
+            }
             margin: 0.5rem; 
                 &:hover {
                 color: grey;
