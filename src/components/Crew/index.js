@@ -1,7 +1,6 @@
 // == Import style
 import { SiHeadspace } from 'react-icons/si';
 import { Link } from 'react-router-dom';
-import Header from '../Header';
 import useMediaQuery from "../Hooks/UseMediaQuery";
 import './crew.scss';
 function Crew({member, currentMember, crewMembers, setCrewMember}) {
@@ -26,7 +25,7 @@ function Crew({member, currentMember, crewMembers, setCrewMember}) {
             className="crew__img--pic" />
           </div>
       }
-        <div>
+        <div className='toto'>
           <h4 className="crew__info__role">
             {member.role}
           </h4>

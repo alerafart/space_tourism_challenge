@@ -2,7 +2,6 @@
 import './technology.scss';
 //
 import { Link } from 'react-router-dom';
-import Header from '../Header';
 import useMediaQuery from "../Hooks/UseMediaQuery";
 function Technology({technology, technologies, setTechnology, currentTech}) {
   console.log(technologies);
@@ -24,7 +23,7 @@ function Technology({technology, technologies, setTechnology, currentTech}) {
                   console.log(index);
                 return <Link 
                 className = {currentTech === t.name? 'technology__infos__container__nav--link activeTec': 'technology__infos__container__nav--link' }
-                key={t.index}
+                key={index}
                 onClick={()=> {setTechnology(t.name)}}
                 >
                 {index}
