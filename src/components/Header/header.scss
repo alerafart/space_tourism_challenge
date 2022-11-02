@@ -8,16 +8,20 @@
   letter-spacing: 2.7px;
   font-family: 'Barlow Condensed', sans-serif;
   color: vars.$mainColor;
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 10px;
+  // left: 30px;
   width: 100%;
-  padding-right: 10% 0;
-
-  @media(max-width:650px){
-    text-align: center;
-    padding-left: 5%;
-    width: 100%;
-  }
+  // padding-right: 10% 0;
+  // @media(max-width:650px){
+  //   // text-align: center;
+  //   // padding-left: 5%;
+  //   // padding: 0 3rem;
+  //   // justify-content: flex-start;
+  //   // width: 80%;
+  //   // left: 50px;
+  //   // background-color: blueviolet;
+  // }
   
   &__left {
     display: flex;
@@ -25,10 +29,16 @@
     padding-right:2* vars.$gutter;
     @media(max-width:650px){
       justify-content: space-between;
+      flex-grow: 0;
+      padding-right: 0;
     }
     
     &__logo {
       padding: vars.$gutter;
+      @media(max-width:650px){
+        // width: 1rem;
+        // padding-left: 4em;
+      }
     }
     &__divider {
       padding: vars.$gutter;
@@ -45,8 +55,7 @@
     display: flex;
     justify-content: center;
     height:4* vars.$gutter;
-    min-width: 50%;
-    width: auto;
+    width: 50%;
     font-weight: 200;
     backdrop-filter: blur(25px);
     background-color: rgba(89, 89, 89, 0.133);
@@ -56,14 +65,15 @@
     }
     @media(max-width:650px){
       height: 100vh;
-      width:7* vars.$gutter ;
       flex-direction: column;
       display: flex;
       justify-content: flex-start;
       align-items: flex-end;
       margin-top: -1* vars.$gutter;
-      padding-left: vars.$gutter;
-      padding-top: 3* vars.$gutter;
+      padding-right:0;
+      flex-grow: 0;
+      // padding-left: vars.$gutter;
+      // padding-top: 3* vars.$gutter;
     }
     // button close mobile navbar
     &--close {
@@ -89,15 +99,18 @@
       visibility: hidden;
       @media(max-width:650px){
         visibility: visible;
-        background-color: 0;
+        color: vars.$secondaryColor;
         font-size: 2* vars.$gutter;
         background:none;
         border: none;
-        display: block;
-        color: vars.$secondaryColor;
-        background-color: none;
-        margin-right: 2%;
+        padding: 0;
+        margin: 0;
         flex-grow: 1;
+        text-align: right;
+        margin-right: 1rem;
+        // background-color: red;
+        // margin-right: 2%;
+        
       }
     }
     //ul

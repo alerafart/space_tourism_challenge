@@ -22,6 +22,7 @@
         width: auto;
         height: 100vh;
         background-size:cover;
+
     }
     &__left {
         height: 50%;
@@ -40,7 +41,8 @@
         }
         @media(max-width:650px){
             width: 90%;
-            margin-top: 8* vars.$gutter;
+            margin-top:6.5em;
+            height: fit-content;
         }
         
         &__h5 {
@@ -56,6 +58,7 @@
             }
             @media(max-width:650px){
                 font-size: 20px;
+                padding: 1rem 2rem 0;
             }
         }
         &__h1 {

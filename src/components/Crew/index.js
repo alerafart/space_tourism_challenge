@@ -10,7 +10,7 @@ function Crew({member, currentMember, crewMembers, setCrewMember}) {
   console.log(member);//object 
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div className='crew' >
       <div className="crew__info">
         <h5 className="crew__info__h5">
@@ -43,7 +43,7 @@ function Crew({member, currentMember, crewMembers, setCrewMember}) {
           {
               crewMembers.map((m)=> {
               return <Link 
-              className = {currentMember === m.name? 'crew__info__slider--link active': 'crew__info__slider--link' }
+              className = {currentMember === m.name? 'crew__info__slider--link activeCrew': 'crew__info__slider--link' }
               key={m.name}
               onClick={()=> {setCrewMember(m.name)}}
               >
